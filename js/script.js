@@ -1,22 +1,22 @@
 //Bank script
-function Account(amnt) {
+function Account() {
 
-  this.balance = amnt;
+  this.balance = current-bal;
   this.deposit = deposit;
   this.withdraw = withdraw;
   this.toString = toString;
 
 }
 
-function deposit(amnt) {
-  this.balance += amnt;
+function deposit() {
+  this.balance += deposit;
 }
 
-function withdraw(amnt) {
-  if (amnt <= this.balance) {
-    this.balance -= amnt;
+function withdraw() {
+  if (withdraw <= this.balance) {
+    this.balance -= withdraw;
   }
-  if (amnt > this.balance) {
+  if (withdraw > this.balance) {
     alert("Insufficient funds");
   }
 }
@@ -25,9 +25,7 @@ function toString() {
   return "Balance: " + this.balance;
 }
 var account = new Account();
-account.deposit();
+account.deposit;
 alert(account.toString());
 account.withdraw;
-alert(account.toString());
-account.withdraw();
 alert(account.toString());
