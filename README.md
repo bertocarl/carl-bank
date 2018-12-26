@@ -1,8 +1,4 @@
 ## Carl  Bank
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 1e728f3071c7c02e5eb9727321f4c13b6d3c7e12
 This is a bank website that will perform banking operations for its customers.
 
 ## Author
