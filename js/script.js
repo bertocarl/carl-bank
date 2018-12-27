@@ -1,7 +1,7 @@
 //Bank script
 function Account() {
 
-  this.balance = current-bal;
+  this.balance = current - bal;
   this.deposit = deposit;
   this.withdraw = withdraw;
   this.toString = toString;
@@ -29,3 +29,12 @@ account.deposit;
 alert(account.toString());
 account.withdraw;
 alert(account.toString());
+
+function User(name) {
+  this.name = name;
+  this.logIn = funciton() {
+    alert("Welcome: " + this.name);
+  };
+}
+let Admin = new User("Admin");
+Admin.logIn();
