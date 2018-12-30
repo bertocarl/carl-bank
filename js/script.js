@@ -8,6 +8,16 @@ function Account() {
 
 }
 
+function User(name) {
+  this.name = name;
+  this.logIn = funciton() {
+    alert("Welcome: " + this.name);
+  };
+}
+
+let Admin = new User("Admin");
+Admin.logIn();
+
 function deposit() {
   this.balance += deposit;
 }
@@ -29,12 +39,3 @@ account.deposit;
 alert(account.toString());
 account.withdraw;
 alert(account.toString());
-
-function User(name) {
-  this.name = name;
-  this.logIn = funciton() {
-    alert("Welcome: " + this.name);
-  };
-}
-let Admin = new User("Admin");
-Admin.logIn();
