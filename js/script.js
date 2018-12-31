@@ -1,22 +1,16 @@
 //Bank script
-function Account() {
-
-  this.balance = current - bal;
-  this.deposit = deposit;
-  this.withdraw = withdraw;
-  this.toString = toString;
-
-}
-
-function User(name) {
+function reg(name,balance) {
   this.name = name;
-  this.logIn = funciton() {
-    alert("Welcome: " + this.name);
-  };
+  this.balance = balance;
+  this.Account = funciton() {
+    return "Welcome: " + this.name + this.balance
+  }
 }
-
-let Admin = new User("Admin");
-Admin.logIn();
+ var person1 = new reg ("Albert", "1000");
+ var person2 = new reg ("Boyd", "2000");
+ console.info(person2);
+ reg.prototype === person1.__proto__ //true
+ person1.__proto__ === person2.__proto__ //true
 
 function deposit() {
   this.balance += deposit;

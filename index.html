@@ -1,51 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/js/bootstrap.min.js">
   <title>Carl Bank </title>
 </head>
 
 <body>
-  <div class="container">
-    <div class="regpanel" id="regpanel">
-      <div class="register-customer" id="reg-customer">
-        <h2>Register Customer</h2>
-        <div class="nameinput" id="name">
-          <div class="initdeposit" id="init-dep">
-            Name<input id="name" type="name" name="name" placeholder="Name">
-            Init. Deposit<input id="init-dep" type="init-dep" name="init-dep" placeholder="Initial Deposit">
-            <button class="btn-reg" id="btnReg" onclick="function User(name)">Register
-            </button>
-          </div>
+  <div class="row">
+    <div class="column">
+      <h2>Register Customer</h2>
+      <div class="nameinput" id="name">
+        <div class="initdeposit" id="init-dep">
+          Name<input id="name" type="name" name="name" placeholder="Name"><br>
+          <p>Init. Deposit<input id="init-dep" type="init-dep" name="init-dep" placeholder="Initial Deposit"></p>
+          <p><button class="btn-reg" id="btnReg" onclick="function reg(name,balance)">Register
+          </button></p>
         </div>
       </div>
     </div>
-    <div class="dep-panel" id="dep-panel">
-      <div class="withdraw-deposit" id="with-dep">
-        <h2>Withdraw/Deposit Cash</h2>
-        <div class="deposit-input" id='deposit'>
-          <div class="withdraw-input" id="withdraw">
-            Deposit Amt<input id="deposit" type="deposit" name="deposit" placeholder="Deposit">
-            <button class="btn-dep" id="btnDep" onclick="function deposit()">Deposit
-            </button><br>
-            Withdraw Amt<input id="withdraw" type="withdraw" name="withdraw" placeholder="Withdraw">
-            <button class="btn-with" id="btnWith" onclick="function withdraw()">Withdraw
-            </button>
-          </div>
+
+    <div class="column">
+      <h2>Current Balance</h2><div class="current-bal" id="current-bal">
+        <h2>Ksh 0</h2>
+      </div>
+    </div>
+    <div class="column">
+      <h2>Withdraw/Deposit Cash</h2>
+      <div class="deposit-input" id='deposit'>
+        <div class="withdraw-input" id="withdraw">
+          Deposit Amt<input id="deposit" type="deposit" name="deposit" placeholder="Deposit">
+          <button class="btn-dep" id="btnDep" onclick="function deposit()">Deposit
+          </button><br>
+          Withdraw Amt<input id="withdraw" type="withdraw" name="withdraw" placeholder="Withdraw">
+          <button class="btn-with" id="btnWith" onclick="function withdraw()">Withdraw
+          </button>
         </div>
       </div>
     </div>
-  </div>
-  <div class="jumbotron">
-    Current Balance<div class="current-bal" id="current-bal">
-      <h2>Ksh 0</h2>
-
-    </div>
-
   </div>
   <script src="js/script.js" charset="utf-8"></script>
 </body>
