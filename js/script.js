@@ -1,25 +1,37 @@
 $(function() {
 
-  var balance 			= 	0.0,
-      amountInput 	= 	$('#amount'),
-      balanceArea 	= 	$('#balance'),
-      choiceSelect  = 	$('#choice'),
-      submitBtn 		= 	$('#submit'),
-      bankForm 			= 	$('#bank');
+  var balance = 0.0,
+    amountInput = $('#amount'),
+    balanceArea = $('#balance'),
+    choiceSelect = $('#choice'),
+    submitBtn = $('#submit'),
+    bankForm = $('#bank');
 
-  function do_transaction(action) {
+  function reg(name, initdeposit) {
+
+    this.name = name;
+    this.initdeposit = initdeposit;
+
+    var name = getElementById('name');
+    var initdeposit = getElementById('initdeposit');
+
+    document.write(name + '');
+    document.write(initdeposit + '');
+  }
+
+  function transact(action) {
 
     var amount = parseFloat(amountInput.val());
 
     if (isNaN(amount) || amount === '') {
       balanceArea.text('Invalid transaction!!');
     } else {
-      if(action === 'deposit') {
+      if (action === 'deposit') {
         balance += amount;
       } else if (action === 'withdrawal') {
         balance -= amount;
       }
-      balanceArea.text('balance: $'+balance);
+      balanceArea.text('balance: $' + balance);
     }
   }
 
@@ -28,9 +40,9 @@ $(function() {
     var choice = choiceSelect.val();
 
     if (choice === 'deposit') {
-      do_transaction(choice);
+      transact(choice);
     } else if (choice === 'withdrawal') {
-      do_transaction(choice);
+      transact(choice);
     }
     return false;
   });
@@ -53,17 +65,3 @@ $(function() {
     }
   });
 });
-
-
-// function reg(name,balance) {
-//   this.name = name;
-//   this.balance = balance;
-//   this.Account = funciton() {
-//     return "Welcome: " + this.name + this.balance
-//   }
-// }
-//  var person1 = new reg ("Albert", "1000");
-//  var person2 = new reg ("Boyd", "2000");
-//  console.info(person2);
-//  reg.prototype === person1.__proto__ //true
-//  person1.__proto__ === person2.__proto__ //true

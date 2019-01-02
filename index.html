@@ -25,7 +25,9 @@
       </div>
     </div>
     <div class="column">
-      <h1><p id="balance"></p></h1>
+      <h1>
+        <p id="balance"></p>
+      </h1>
     </div>
     <div class="column">
       <h2>Deposit & Withdrawals</h2>
@@ -43,63 +45,7 @@
   </div>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script>
-    $(function() {
-
-      var balance = 0.0,
-        amountInput = $('#amount'),
-        balanceArea = $('#balance'),
-        choiceSelect = $('#choice'),
-        submitBtn = $('#submit'),
-        bankForm = $('#bank');
-
-      function do_transaction(action) {
-
-        var amount = parseFloat(amountInput.val());
-
-        if (isNaN(amount) || amount === '') {
-          balanceArea.text('Invalid transaction!!');
-        } else {
-          if (action === 'deposit') {
-            balance += amount;
-          } else if (action === 'withdrawal') {
-            balance -= amount;
-          }
-          balanceArea.text('Balance: Ksh' + balance);
-        }
-      }
-
-      bankForm.submit(function() {
-
-        var choice = choiceSelect.val();
-
-        if (choice === 'deposit') {
-          do_transaction(choice);
-        } else if (choice === 'withdrawal') {
-          do_transaction(choice);
-        }
-        return false;
-      });
-
-      //// Select Menu Functionality//////////
-
-      amountInput.hide();
-      submitBtn.hide();
-
-      choiceSelect.change(function() {
-
-        var choice = choiceSelect.val();
-
-        if (choice === 'deposit' || choice === 'withdrawal') {
-          amountInput.show().val('');
-          submitBtn.show();
-        } else {
-          amountInput.hide().val('');
-          submitBtn.hide();
-        }
-      });
-    });
-  </script>
+  <script src="js/script.js" charset="utf-8"></script>
 </body>
 
 </html>
