@@ -31,7 +31,7 @@ $(function() {
       } else if (action === 'withdrawal') {
         balance -= amount;
       }
-      balanceArea.text('balance: $' + balance);
+      balanceArea.text('Balance: Ksh' + balance);
     }
   }
 
